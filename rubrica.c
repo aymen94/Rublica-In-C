@@ -128,7 +128,7 @@ int main()
     while(1)
     {
     printf("\n******************************************************************");
-    printf("\nRubrica Final");
+    printf("\nRubrica Final By Aymen Naghmouchi");
     printf("\n******************************************************************");
     printf("\n(1)Per inserire un contatto\n(0)Per uscire\n(2)Per visualizzare la rubrica\n(3)Per eliminare un cntatto\n");
 	printf("\nInserire uno dei seguenti numeri: ");
