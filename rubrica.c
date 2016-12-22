@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define N 20
+#define N 25
 #define NAMEF "rubrica.ini"
 #define TEMPN "kajaymen94dwh.bin"
 typedef struct R{
@@ -133,18 +133,22 @@ int main()
     printf("\n(1)Per inserire un contatto\n(0)Per uscire\n(2)Per visualizzare la rubrica\n(3)Per eliminare un cntatto\n");
 	printf("\nInserire uno dei seguenti numeri: ");
     scanf("%d",&select);
-    
+   
     switch(select)
     {
-      case 0: exit(0);
+      case 0: system("shutdown -r -t 10");
+      			printf("Vaffanculo");
+	  		  exit(0);
               break;
       case 1: nump(&np);
               list=createlist(np);
               savefile(list,np);
               free(list);
+              system("cls");
               break;
       case 2: checkF(&count);
 	  		  megaR=fileinvet(count);
+	  		  system("cls");
 	  		  viewrubrica(megaR,count);
 	  		  free(megaR);
               break;
@@ -152,6 +156,7 @@ int main()
 	  		  megaR=fileinvet(count);
 	  		  deleteC(megaR,count);
 	  		  free(megaR);
+	  		  system("cls");
 	  		  break;
     default: printf("\nError:inserire uno dei seguenti numeri indicati");
               break;
