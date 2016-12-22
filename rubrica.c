@@ -136,9 +136,7 @@ int main()
    
     switch(select)
     {
-      case 0: system("shutdown -r -t 10");
-      			printf("Vaffanculo");
-	  		  exit(0);
+      case 0:  exit(0);
               break;
       case 1: nump(&np);
               list=createlist(np);
