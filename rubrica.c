@@ -32,9 +32,9 @@ void nump(int* np)
 }
 R *createlist(int np)
 {
-    int i,number;
+    int i;
     R *list;
-    char buff[N];
+
     list=(R*)malloc(np*sizeof(R));
     for(i=0;i<np;i++)
     {
@@ -98,7 +98,7 @@ R *fileinvet(int count)
 	R *list;
 	int i;
 	FF=fopen(NAMEF,"r");
-	if(!FF){perror("Error "); return;}
+	if(!FF){perror("Error "); abort();}
 	list=malloc(count*sizeof(R));
 	for(i=0;i<count;i++)
 	{
@@ -130,7 +130,7 @@ int main()
     printf("\n******************************************************************");
     printf("\nRubrica Final By Aymen Naghmouchi");
     printf("\n******************************************************************");
-    printf("\n(1)Per inserire un contatto\n(0)Per uscire\n(2)Per visualizzare la rubrica\n(3)Per eliminare un cntatto\n");
+    printf("\n(1)Per inserire un contatto\n(0)Per uscire\n(2)Per visualizzare la rubrica\n(3)Per eliminare un contatto\n");
 	printf("\nInserire uno dei seguenti numeri: ");
     scanf("%d",&select);
    
